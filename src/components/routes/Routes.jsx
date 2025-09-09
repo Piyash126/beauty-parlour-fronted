@@ -38,12 +38,6 @@ export const router = createBrowserRouter([
         path: "/signup",
         element: <SignUp></SignUp>,
       },
-      // {
-      //   path: "commentSection/:id",
-      //   element: <CommentSection></CommentSection>,
-      //   loader: ({ params }) =>
-      //     fetch(`http://localhost:5000/services/${params.id}`),
-      // },
     ],
   },
 
@@ -101,7 +95,7 @@ export const router = createBrowserRouter([
         path: "updateService/:id",
         element: <UpdateService></UpdateService>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/services/${params.id}`),
+          fetch(`${import.meta.env.VITE_baseURL}/services/${params.id}`),
       },
     ],
   },

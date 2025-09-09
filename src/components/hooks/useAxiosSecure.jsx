@@ -6,7 +6,7 @@ import { AuthContext } from "../authentication/context/providers/AuthProvider";
 
 // base axios instance (module level)
 const axiosSecure = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: import.meta.env.VITE_baseURL,
 });
 
 const useAxiosSecure = () => {
